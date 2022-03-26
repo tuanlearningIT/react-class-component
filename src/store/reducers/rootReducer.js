@@ -21,6 +21,7 @@ const persistCommonConfig = {
 //     whitelist: ['isLoggedIn', 'adminInfo']
 // };
 
+
 const userPersistConfig = {
     ...persistCommonConfig,
     key: 'user',
