@@ -22,6 +22,11 @@ import DetailClinic from './Patient/Clinic/DetailClinic';
 import SpecialistExamination from './HomePage/SpecialistExamination';
 import DoctorGood from './HomePage/DoctorGood';
 import ClinicNew from './HomePage/ClinicNew';
+import DetailHandBook from './System/HandBook/DetailHandBook';
+import handbookSeeMore from './System/HandBook/HandbookSeeMore';
+import HandbookSeeMore from './System/HandBook/HandbookSeeMore';
+
+
 class App extends Component {
 
     handlePersistorState = () => {
@@ -56,10 +61,12 @@ class App extends Component {
                                     <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
                                     <Route path={path.VERIFY_EMAIL_BOOKING} component={verifyEmail} />
                                     <Route path={path.DETAIL_SPECIALTY} component={DetailSpecialty} />
+                                    <Route path={path.DETAIL_HANDBOOK} component={DetailHandBook} />
                                     <Route path={path.DETAIL_CLINIC} component={DetailClinic} />
                                     <Route path={path.SPECIALTIES} component={SpecialistExamination} />
                                     <Route path={path.DOCTOR_GOOD} component={DoctorGood} />
                                     <Route path={path.CLINIC} component={ClinicNew} />
+                                    <Route path={path.HANDBOOK_SEE_MORE} component={HandbookSeeMore} />
                                     <Route path={path.FORGOT} component={Forgot} />
 
 

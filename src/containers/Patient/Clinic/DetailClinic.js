@@ -100,6 +100,7 @@ class DetailClinic extends Component {
                         }
 
                     </div>
+
                 </div>
 
             </>

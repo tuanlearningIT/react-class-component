@@ -92,7 +92,7 @@ class ManageClinic extends Component {
                             onChange={(event) => this.handleChangeInput(event, 'address')} />
                     </div>
                     <div className='col-12 mt-3'>
-                        <MdEditor style={{ height: '300px' }} renderHTML={text => mdParser.render(text)} onChange={this.handleEditorChange} value={this.state.descriptionMarkdown} />
+                        <MdEditor style={{ height: '500px' }} renderHTML={text => mdParser.render(text)} onChange={this.handleEditorChange} value={this.state.descriptionMarkdown} />
                     </div>
                     <div className='col-12'>
                         <button className='btn-save-clinic'

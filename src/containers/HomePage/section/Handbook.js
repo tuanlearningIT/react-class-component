@@ -5,46 +5,74 @@ import './Handbook.scss';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { getAllHandBook } from '../../../services/userService';
 import { FormattedMessage } from 'react-intl';
+import { withRouter } from 'react-router';
 class Handbook extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataHandBook: []
+        }
+    }
+    async componentDidMount() {
+        let res = await getAllHandBook();
+        if (res && res.errCode === 0) {
+            this.setState({
+                dataHandBook: res.data ? res.data : []
+            })
+        }
+    }
+    handleDetailHandBook = (handbook) => {
+        if (this.props.history) {
+            this.props.history.push(`/detai-handbook/${handbook.id}`)
+        }
 
+    }
 
+    handlePushHandBook = () => {
+        if (this.props.history) {
+            this.props.history.push(`/handbook`)
+        }
+    }
     render() {
-        let settings = this.props.settings
+        let settings = {
+            dots: false,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 2,
+            slidesToScroll: 2
+        };
+        let { dataHandBook } = this.state
         return (
             <div className='section-handbook'>
 
                 <div className='handbook-container'>
                     <div className='handbook-header'>
-                        <span className='title-header'>Cẩm nang</span>
-                        <button className='btn-header'>TÌM KIẾM</button>
+                        <span className='title-header'><FormattedMessage id="home-page.hand-book" /></span>
+                        <button className='btn-header' onClick={() => this.handlePushHandBook()}><FormattedMessage id="home-page.more-info" /></button>
                     </div>
                     <div className='handbook-body'>
                         <Slider {...settings}>
-                            <div className='section-customize'>
-                                <div className='bg-image section-handbook' />
-                                <div>1</div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='bg-image section-handbook' />
-                                <div>2</div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='bg-image section-handbook' />
-                                <div>3</div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='bg-image section-handbook' />
-                                <div>4</div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='bg-image section-handbook' />
-                                <div>5</div>
-                            </div>
-                            <div className='section-customize'>
-                                <div className='bg-image section-handbook' />
-                                <div>6</div>
-                            </div>
+                            {
+                                dataHandBook && dataHandBook.length > 0 &&
+                                dataHandBook.map((item, index) => {
+                                    return (
+                                        <>
+                                            <div className='section-customize' key={index} onClick={() => this.handleDetailHandBook(item)}>
+                                                <div className='bg-image section-specialty'
+
+                                                    style={{ backgroundImage: `url(${item.image})` }} />
+                                                <div className='handbook-name' >{item.name}</div>
+                                            </div>
+
+                                        </>
+
+                                    )
+                                })
+                            }
+
+
                         </Slider>
                     </div>
 
@@ -67,4 +95,4 @@ const mapDispatchToProps = dispatch => {
     return {
     };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Handbook);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Handbook));

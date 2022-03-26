@@ -21,7 +21,7 @@
 
 
         .left-content {
-            width: 25%;
+            width: 31%;
 
             display     : flex;
             align-items : center;
@@ -43,7 +43,7 @@
         }
 
         .center-content {
-            width: 41%;
+            width: 36%;
 
             display        : flex;
             justify-content: space-between;
@@ -60,7 +60,7 @@
                 }
 
                 &:last-child {
-                    margin-left: -51px;
+                    margin-left: -19px;
                 }
             }
         }

@@ -8,10 +8,12 @@ export const path = {
     DETAIL_DOCTOR: '/detail-doctor/:id',
     VERIFY_EMAIL_BOOKING: '/verify-booking/',
     DETAIL_SPECIALTY: '/detai-specialty/:id',
+    DETAIL_HANDBOOK: '/detai-handbook/:id',
     DETAIL_CLINIC: '/detai-clinic/:id',
     SPECIALTIES: '/specialty',
     DOCTOR_GOOD: '/doctor-good',
-    CLINIC: '/clinic'
+    CLINIC: '/clinic',
+    HANDBOOK_SEE_MORE: '/handbook'
 };
 
 export const LANGUAGES = {

@@ -12,5 +12,24 @@
 
         }
 
+        .handbook-body {
+            .section-customize {
+                display: flex;
+
+
+                .handbook-name {
+                    width    : 56%;
+                    font-size: 17px;
+
+                    margin-left: 10px;
+
+                    &:hover {
+                        color: #45c3d5
+                    }
+
+                }
+            }
+        }
+
     }
 }

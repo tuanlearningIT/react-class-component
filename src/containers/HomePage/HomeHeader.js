@@ -60,11 +60,11 @@ class HomeHeader extends Component {
                                     <div className='subs-title'><FormattedMessage id="homeheader.selectdoctor" /></div>
                                 </div>
                             </div>
-                            <div className='child-content'>
+                            {/* <div className='child-content'>
                                 <div ><b><FormattedMessage id="homeheader.package" /></b>
                                     <div className='subs-title'><FormattedMessage id="homeheader.generalhealt" /></div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className='right-content'>
                             <div className='support'><i className="fas fa-question-circle"></i><FormattedMessage id="homeheader.support" /> </div>

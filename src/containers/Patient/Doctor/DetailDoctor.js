@@ -8,7 +8,7 @@ import DoctorSchedule from './DoctorSchedule'
 import DoctorExtraInfo from './DoctorExtraInfo';
 import LikeAndShare from '../socialPlugin/LikeAndShare';
 import Comment from '../socialPlugin/Comment';
-import HomeFooter from '../../HomePage/HomeFooter';
+
 require('dotenv').config();
 class DetailDoctor extends Component {
     constructor(props) {
@@ -98,8 +98,9 @@ class DetailDoctor extends Component {
                         />
                     </div>
                 </div>
-                <HomeFooter />
+
             </>
+
         );
     }
 }
