@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { connect } from 'react-redux';
 import './Handbook.scss';
 import Slider from "react-slick";
@@ -58,15 +57,12 @@ class Handbook extends Component {
                                 dataHandBook && dataHandBook.length > 0 &&
                                 dataHandBook.map((item, index) => {
                                     return (
-                                        <>
-                                            <div className='section-customize' key={index} onClick={() => this.handleDetailHandBook(item)}>
-                                                <div className='bg-image section-specialty'
+                                        <div className='section-customize' key={item.id} onClick={() => this.handleDetailHandBook(item)}>
+                                            <div className='bg-image section-specialty'
 
-                                                    style={{ backgroundImage: `url(${item.image})` }} />
-                                                <div className='handbook-name' >{item.name}</div>
-                                            </div>
-
-                                        </>
+                                                style={{ backgroundImage: `url(${item.image})` }} />
+                                            <div className='handbook-name' >{item.name}</div>
+                                        </div>
 
                                     )
                                 })

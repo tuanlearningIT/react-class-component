@@ -23,8 +23,9 @@ import SpecialistExamination from './HomePage/SpecialistExamination';
 import DoctorGood from './HomePage/DoctorGood';
 import ClinicNew from './HomePage/ClinicNew';
 import DetailHandBook from './System/HandBook/DetailHandBook';
-import handbookSeeMore from './System/HandBook/HandbookSeeMore';
+
 import HandbookSeeMore from './System/HandBook/HandbookSeeMore';
+import PageNotFound from './HomePage/PageNotFound/PageNotFound';
 
 
 class App extends Component {
@@ -73,16 +74,11 @@ class App extends Component {
                                     <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
                                     <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
                                     <Route path='/doctor' component={userIsAuthenticated(Doctor)} />
+                                    <Route path={path.PAGE_NOT_FOUND} component={PageNotFound} />
                                 </Switch>
                             </CustomScrollbars>
                         </div>
-                        {/* 
-                        <ToastContainer
-                            className="toast-container" toastClassName="toast-item" bodyClassName="toast-item-body"
-                            autoClose={false} hideProgressBar={true} pauseOnHover={false}
-                            pauseOnFocusLoss={true} closeOnClick={false} draggable={false}
-                            closeButton={<CustomToastCloseButton />}
-                        /> */}
+
                         <ToastContainer
                             position="bottom-right"
                             autoClose={5000}

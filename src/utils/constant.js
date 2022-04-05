@@ -1,6 +1,7 @@
 export const path = {
     HOME: '/',
     HOMEPAGE: '/home',
+
     LOGIN: '/login',
     FORGOT: '/forgot',
     LOG_OUT: '/logout',
@@ -13,7 +14,8 @@ export const path = {
     SPECIALTIES: '/specialty',
     DOCTOR_GOOD: '/doctor-good',
     CLINIC: '/clinic',
-    HANDBOOK_SEE_MORE: '/handbook'
+    HANDBOOK_SEE_MORE: '/handbook',
+    PAGE_NOT_FOUND: '*',
 };
 
 export const LANGUAGES = {

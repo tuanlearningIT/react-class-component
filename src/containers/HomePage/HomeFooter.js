@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
 import { connect } from 'react-redux';
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FormattedMessage } from 'react-intl';
@@ -12,7 +10,7 @@ class HomeFooter extends Component {
                 <div className='footer-content'>
                     <p>Copyright &copy; 2022 Tuan learning IT. More importmation, please visit my github.</p>
                     <div>
-                        <a href='https://github.com/tuanlearningIT'>&rarr;click here.&larr; </a>
+                        <a target="_blank" href='https://github.com/tuanlearningIT'>&rarr;click here.&larr; </a>
                     </div>
 
                 </div>
