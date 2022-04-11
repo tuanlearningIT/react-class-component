@@ -46,7 +46,7 @@ class SpecialistExamination extends Component {
                                             <div className='bg-image section-specialty'
 
                                                 style={{ backgroundImage: `url(${item.image})` }} />
-                                            <div className='specialty-name ' >{item.name}</div>
+                                            <div className='specialty-name' >{item.name}</div>
                                         </div>
                                     </>
                                 )
